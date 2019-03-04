@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 2019_02_28_231521) do
   create_table "characters", force: :cascade do |t|
     t.string "name"
     t.string "house"
-    t.boolean "male"
+    t.string "gender"
     t.string "culture"
-    t.string "imageLink"
+    t.string "playedBy"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
