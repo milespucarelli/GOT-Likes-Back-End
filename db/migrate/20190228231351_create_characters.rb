@@ -3,9 +3,9 @@ class CreateCharacters < ActiveRecord::Migration[5.2]
     create_table :characters do |t|
       t.string :name
       t.string :house
-      t.boolean :male
+      t.string :gender
       t.string :culture
-      t.string :imageLink
+      t.string :playedBy
 
       t.timestamps
     end

@@ -1587,3 +1587,937 @@ Processing by Api::V1::CharactersController#index as HTML
 Completed 200 OK in 189ms (Views: 156.8ms | ActiveRecord: 21.9ms)
 
 
+Started GET "/api/v1/characters" for 127.0.0.1 at 2019-03-04 09:59:02 -0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/milespucarelli/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::CharactersController#index as HTML
+  [1m[36mCharacter Load (62.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (4.0ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (25.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 16]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 16]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 18]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 18]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 19]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 19]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 20]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 20]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 21]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 21]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 22]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 22]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 23]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 23]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 24]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 24]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 25]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 25]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 26]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 26]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 27]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 27]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 28]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 28]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 29]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 29]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 30]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 30]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 31]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 31]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 32]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 32]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 33]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 33]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 34]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 34]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 35]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 35]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 36]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 36]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 37]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 37]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 38]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 38]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 39]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 39]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 40]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 40]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 41]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 41]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 42]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 42]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 43]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 43]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 44]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 44]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 45]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 45]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 46]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 46]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 47]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 47]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 48]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 48]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 49]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 49]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 50]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 50]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (193.49ms)
+Completed 200 OK in 294ms (Views: 172.2ms | ActiveRecord: 117.2ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-03-04 09:59:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/characters" for 127.0.0.1 at 2019-03-04 10:53:35 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/milespucarelli/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::CharactersController#index as HTML
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 16]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 16]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 18]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 18]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 19]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 19]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 20]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 20]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 21]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 21]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 22]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 22]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 23]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 23]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 24]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 24]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 25]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 25]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 26]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 26]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 27]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 27]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 28]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 28]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 29]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 29]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 30]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 30]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 31]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 31]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 32]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 32]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 33]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 33]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 34]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 34]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 35]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 35]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 36]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 36]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 37]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 37]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 38]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 38]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 39]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 39]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 40]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 40]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 41]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 41]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 42]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 42]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 43]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 43]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 44]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 44]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 45]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 45]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 46]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 46]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 47]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 47]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 48]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 48]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 49]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 49]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."character_id" = $1[0m  [["character_id", 50]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "likes" ON "users"."id" = "likes"."user_id" WHERE "likes"."character_id" = $1[0m  [["character_id", 50]]
+[active_model_serializers]   ↳ app/controllers/api/v1/characters_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (147.7ms)
+Completed 200 OK in 174ms (Views: 150.7ms | ActiveRecord: 19.6ms)
+
+
+  [1m[35m (41.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(556717638517758900)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateLikes (20190228231521)
+  [1m[35m (39.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.8ms)[0m  [1m[35mDROP TABLE "likes"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (56.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190228231521"]]
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(556717638517758900)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(556717638517758900)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCharacters (20190228231351)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "characters"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190228231351"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(556717638517758900)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(556717638517758900)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190228230206)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190228230206"]]
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(556717638517758900)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(556717638517758900)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(556717638517758900)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(556717638517758900)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190228230206)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (59.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190228230206_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190228230206"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateCharacters (20190228231351)
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(556717638517758900)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(556717638517758900)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190228230206)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190228230206"]]
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(556717638517758900)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(556717638517758900)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(556717638517758900)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(556717638517758900)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190228230206)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190228230206_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190228230206"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateCharacters (20190228231351)
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "characters" ("id" bigserial primary key, "name" character varying, "house" character varying, "gender" character varying, "culture" character varying, "playedBy" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190228231351_create_characters.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190228231351"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateLikes (20190228231521)
+  [1m[35m (3.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" integer, "character_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190228231521_create_likes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190228231521"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(556717638517758900)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (2.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Walder"], ["gender", "Male"], ["culture", ""], ["playedBy", "Kristian Nairn"], ["created_at", "2019-03-04 21:28:45.433055"], ["updated_at", "2019-03-04 21:28:45.433055"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Margaery Tyrell"], ["gender", "Female"], ["culture", "Westeros"], ["playedBy", "Natalie Dormer"], ["created_at", "2019-03-04 21:28:45.437312"], ["updated_at", "2019-03-04 21:28:45.437312"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tywin Lannister"], ["gender", "Male"], ["culture", ""], ["playedBy", "Charles Dance"], ["created_at", "2019-03-04 21:28:45.438941"], ["updated_at", "2019-03-04 21:28:45.438941"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Aemon Targaryen"], ["gender", "Male"], ["culture", "Valyrian"], ["playedBy", "Peter Vaughan"], ["created_at", "2019-03-04 21:28:45.440422"], ["updated_at", "2019-03-04 21:28:45.440422"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Alliser Thorne"], ["gender", "Male"], ["culture", ""], ["playedBy", "Owen Teale"], ["created_at", "2019-03-04 21:28:45.442138"], ["updated_at", "2019-03-04 21:28:45.442138"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Arya Stark"], ["gender", "Female"], ["culture", "Northmen"], ["playedBy", "Maisie Williams"], ["created_at", "2019-03-04 21:28:45.443776"], ["updated_at", "2019-03-04 21:28:45.443776"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Barristan Selmy"], ["gender", "Male"], ["culture", "Westeros"], ["playedBy", "Ian McElhinney"], ["created_at", "2019-03-04 21:28:45.445633"], ["updated_at", "2019-03-04 21:28:45.445633"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Beric Dondarrion"], ["gender", "Male"], ["culture", ""], ["playedBy", "David Michael Scott"], ["created_at", "2019-03-04 21:28:45.447419"], ["updated_at", "2019-03-04 21:28:45.447419"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Brandon Stark"], ["gender", "Male"], ["culture", "Northmen"], ["playedBy", "Isaac Hempstead-Wright"], ["created_at", "2019-03-04 21:28:45.449244"], ["updated_at", "2019-03-04 21:28:45.449244"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Brienne of Tarth"], ["gender", "Female"], ["culture", ""], ["playedBy", "Gwendoline Christie"], ["created_at", "2019-03-04 21:28:45.450761"], ["updated_at", "2019-03-04 21:28:45.450761"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bronn"], ["gender", "Male"], ["culture", ""], ["playedBy", "Jerome Flynn"], ["created_at", "2019-03-04 21:28:45.452552"], ["updated_at", "2019-03-04 21:28:45.452552"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cersei Lannister"], ["gender", "Female"], ["culture", "Westerman"], ["playedBy", "Lena Headey"], ["created_at", "2019-03-04 21:28:45.454314"], ["updated_at", "2019-03-04 21:28:45.454314"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Eddison Tollet"], ["gender", "Male"], ["culture", "Valemen"], ["playedBy", "Ben Crompton"], ["created_at", "2019-03-04 21:28:45.456006"], ["updated_at", "2019-03-04 21:28:45.456006"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Grenn"], ["gender", "Male"], ["culture", "Westeros"], ["playedBy", "Mark Stanley"], ["created_at", "2019-03-04 21:28:45.457665"], ["updated_at", "2019-03-04 21:28:45.457665"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jaime Lannister"], ["gender", "Male"], ["culture", "Westerlands"], ["playedBy", "Nikolaj Coster-Waldau"], ["created_at", "2019-03-04 21:28:45.459455"], ["updated_at", "2019-03-04 21:28:45.459455"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Janos Slynt"], ["gender", "Male"], ["culture", ""], ["playedBy", "Dominic Carter"], ["created_at", "2019-03-04 21:28:45.461188"], ["updated_at", "2019-03-04 21:28:45.461188"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Joffrey Baratheon"], ["gender", "Male"], ["culture", ""], ["playedBy", "Jack Gleeson"], ["created_at", "2019-03-04 21:28:45.462711"], ["updated_at", "2019-03-04 21:28:45.462711"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jon Snow"], ["gender", "Male"], ["culture", "Northmen"], ["playedBy", "Kit Harington"], ["created_at", "2019-03-04 21:28:45.464337"], ["updated_at", "2019-03-04 21:28:45.464337"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Kevan Lannister"], ["gender", "Male"], ["culture", ""], ["playedBy", "Ian Gelder"], ["created_at", "2019-03-04 21:28:45.466009"], ["updated_at", "2019-03-04 21:28:45.466009"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Loras Tyrell"], ["gender", "Male"], ["culture", "Reach"], ["playedBy", "Finn Jones"], ["created_at", "2019-03-04 21:28:45.467678"], ["updated_at", "2019-03-04 21:28:45.467678"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Melisandre"], ["gender", "Female"], ["culture", "Asshai"], ["playedBy", "Carice van Houten"], ["created_at", "2019-03-04 21:28:45.469263"], ["updated_at", "2019-03-04 21:28:45.469263"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Meryn Trant"], ["gender", "Male"], ["culture", ""], ["playedBy", "Ian Beattie"], ["created_at", "2019-03-04 21:28:45.470927"], ["updated_at", "2019-03-04 21:28:45.470927"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Myrcella Baratheon"], ["gender", "Female"], ["culture", ""], ["playedBy", "Aimee Richardson, Nell Tiger Free"], ["created_at", "2019-03-04 21:28:45.472704"], ["updated_at", "2019-03-04 21:28:45.472704"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Petyr Baelish"], ["gender", "Male"], ["culture", "Valemen"], ["playedBy", "Aidan Gillen"], ["created_at", "2019-03-04 21:28:45.474407"], ["updated_at", "2019-03-04 21:28:45.474407"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Podrick Payne"], ["gender", "Male"], ["culture", ""], ["playedBy", "Daniel Portman"], ["created_at", "2019-03-04 21:28:45.476111"], ["updated_at", "2019-03-04 21:28:45.476111"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ramsay Snow"], ["gender", "Male"], ["culture", "Northmen"], ["playedBy", "Iwan Rheon"], ["created_at", "2019-03-04 21:28:45.478039"], ["updated_at", "2019-03-04 21:28:45.478039"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Rickon Stark"], ["gender", "Male"], ["culture", "Northmen"], ["playedBy", "Art Parkinson"], ["created_at", "2019-03-04 21:28:45.479705"], ["updated_at", "2019-03-04 21:28:45.479705"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Roose Bolton"], ["gender", "Male"], ["culture", "Northmen"], ["playedBy", "Michael McElhatton"], ["created_at", "2019-03-04 21:28:45.481205"], ["updated_at", "2019-03-04 21:28:45.481205"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Samwell Tarly"], ["gender", "Male"], ["culture", "Andal"], ["playedBy", "John Bradley-West"], ["created_at", "2019-03-04 21:28:45.482762"], ["updated_at", "2019-03-04 21:28:45.482762"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Sandor Clegane"], ["gender", "Male"], ["culture", ""], ["playedBy", "Rory McCann"], ["created_at", "2019-03-04 21:28:45.484389"], ["updated_at", "2019-03-04 21:28:45.484389"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Sansa Stark"], ["gender", "Female"], ["culture", "Northmen"], ["playedBy", "Sophie Turner"], ["created_at", "2019-03-04 21:28:45.485949"], ["updated_at", "2019-03-04 21:28:45.485949"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Theon Greyjoy"], ["gender", "Male"], ["culture", "Ironborn"], ["playedBy", "Alfie Allen"], ["created_at", "2019-03-04 21:28:45.487668"], ["updated_at", "2019-03-04 21:28:45.487668"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tommen Baratheon"], ["gender", "Male"], ["culture", ""], ["playedBy", "Callum Wharry"], ["created_at", "2019-03-04 21:28:45.489218"], ["updated_at", "2019-03-04 21:28:45.489218"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tyrion Lannister"], ["gender", "Male"], ["culture", ""], ["playedBy", "Peter Dinklage"], ["created_at", "2019-03-04 21:28:45.490907"], ["updated_at", "2019-03-04 21:28:45.490907"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Daario Naharis"], ["gender", "Male"], ["culture", "Tyroshi"], ["playedBy", "Ed Skrein"], ["created_at", "2019-03-04 21:28:45.492641"], ["updated_at", "2019-03-04 21:28:45.492641"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Daenerys Targaryen"], ["gender", "Female"], ["culture", "Valyrian"], ["playedBy", "Emilia Clarke"], ["created_at", "2019-03-04 21:28:45.494253"], ["updated_at", "2019-03-04 21:28:45.494253"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Davos Seaworth"], ["gender", "Male"], ["culture", "Westeros"], ["playedBy", "Liam Cunningham"], ["created_at", "2019-03-04 21:28:45.495905"], ["updated_at", "2019-03-04 21:28:45.495905"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Gilly"], ["gender", "Female"], ["culture", "Free Folk"], ["playedBy", "Hannah Murray"], ["created_at", "2019-03-04 21:28:45.497629"], ["updated_at", "2019-03-04 21:28:45.497629"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Gregor Clegane"], ["gender", "Male"], ["culture", ""], ["playedBy", "Conan Stevens"], ["created_at", "2019-03-04 21:28:45.499279"], ["updated_at", "2019-03-04 21:28:45.499279"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Grey Worm"], ["gender", "Male"], ["culture", ""], ["playedBy", "Jacob Anderson"], ["created_at", "2019-03-04 21:28:45.500933"], ["updated_at", "2019-03-04 21:28:45.500933"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Hot Pie"], ["gender", "Male"], ["culture", ""], ["playedBy", "Ben Hawkey"], ["created_at", "2019-03-04 21:28:45.502608"], ["updated_at", "2019-03-04 21:28:45.502608"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jorah Mormont"], ["gender", "Male"], ["culture", "Northmen"], ["playedBy", "Iain Glen"], ["created_at", "2019-03-04 21:28:45.504489"], ["updated_at", "2019-03-04 21:28:45.504489"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Marei"], ["gender", "Female"], ["culture", ""], ["playedBy", "Josephine Gillan"], ["created_at", "2019-03-04 21:28:45.506062"], ["updated_at", "2019-03-04 21:28:45.506062"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Missandei"], ["gender", "Female"], ["culture", "Naathi"], ["playedBy", "Nathalie Emmanuel"], ["created_at", "2019-03-04 21:28:45.507909"], ["updated_at", "2019-03-04 21:28:45.507909"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Osha"], ["gender", "Female"], ["culture", "Free Folk"], ["playedBy", "Natalia Tena"], ["created_at", "2019-03-04 21:28:45.509631"], ["updated_at", "2019-03-04 21:28:45.509631"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Pycelle"], ["gender", "Male"], ["culture", ""], ["playedBy", "Julian Glover"], ["created_at", "2019-03-04 21:28:45.511322"], ["updated_at", "2019-03-04 21:28:45.511322"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Qyburn"], ["gender", "Male"], ["culture", ""], ["playedBy", "Anton Lesser"], ["created_at", "2019-03-04 21:28:45.512826"], ["updated_at", "2019-03-04 21:28:45.512826"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Shae"], ["gender", "Female"], ["culture", ""], ["playedBy", "Sibel Kekilli"], ["created_at", "2019-03-04 21:28:45.514356"], ["updated_at", "2019-03-04 21:28:45.514356"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Stannis Baratheon"], ["gender", "Male"], ["culture", ""], ["playedBy", "Stephen Dillane"], ["created_at", "2019-03-04 21:28:45.515825"], ["updated_at", "2019-03-04 21:28:45.515825"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tormund"], ["gender", "Male"], ["culture", "Free Folk"], ["playedBy", "Kristofer Hivju"], ["created_at", "2019-03-04 21:28:45.517361"], ["updated_at", "2019-03-04 21:28:45.517361"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCharacter Create (0.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "gender", "culture", "playedBy", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Varys"], ["gender", "Male"], ["culture", ""], ["playedBy", "Conleth Hill"], ["created_at", "2019-03-04 21:28:45.519209"], ["updated_at", "2019-03-04 21:28:45.519209"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "characters"[0m
